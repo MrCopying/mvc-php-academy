@@ -90,11 +90,10 @@ class Router{
 
         $path_parts = explode('/', $path);
 
-        echo '<pre>'; print_r($path_parts);
+        //echo '<pre>'; print_r($path_parts);
         //echo '<br/>'.var_dump(array('')).'<br/>'.var_dump(empty(array('')));
         //var_dump($this->uri, $uri_path, $path, $path_parts, empty($path_parts[0]));echo '<br>';
         if ( !empty($path_parts[0]) ){
-
             //Get route or language at first element
             if ( in_array( strtolower($path_parts[0]), array_keys($routes)) ){
                 $this->route =strtolower($path_parts[0]);
